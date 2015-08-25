@@ -1,0 +1,34 @@
+{
+  "name": "offline-data",
+  "version": "0.0.0",
+  "description": "A general-purpose, minimal solution for offline data access.",
+  "repository": "n/a",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "rm -rf dist && broccoli build dist && mocha"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "test"
+  ],
+  "author": "Simon Wade",
+  "license": "MIT",
+  "devDependencies": {
+    "bluebird": "^2.2.2",
+    "broccoli": "^0.13.3",
+    "broccoli-dist-es6-module": "^0.2.0",
+    "broccoli-export-tree": "^0.3.2",
+    "chai": "^2.1.2",
+    "chai-as-promised": "^4.1.1",
+    "lodash": "^2.4.1",
+    "memdown": "^0.10.2",
+    "mocha": "^1.21.3",
+    "pouchdb": "^2.2.3",
+    "sinon": "^1.10.3",
+    "sinon-as-promised": "0.0.4",
+    "sinon-chai": "^2.7.0"
+  }
+}
