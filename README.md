@@ -29,8 +29,6 @@ You should populate a CouchDB (or [pouch-server]()) with the documents that you 
 }
 ```
 
-There's also an [ember-cli addon](http://github.com/franq/ember-offline-data) for use with Ember, and which also provides a Mixin for integrating with Ember Data.
-
 ### Methods
 
 #### DataCache#constructor(dbName, upstream, opts)
@@ -42,7 +40,7 @@ Creates a new DataCache instance for accessing the data in the `upstream` databa
 - `@param [opts] {object}` An options hash
   - `.pouch` options for the call to the `PouchDB` constructor
   - `.verbose` Log all replication events to the console
-  
+
 #### DataCache#get(uri, options)
 
 Performs a lookup in the cache for the specified URI.
@@ -53,7 +51,7 @@ Performs a lookup in the cache for the specified URI.
 
 #### DataCache#fallbackTo(fn)
 
-Allows a fallback function to be used to provide the content if it's not in the cache. For example, this can be used to fallback to an HTTP request on cache misses. `fn` may return a value or a Promise. 
+Allows a fallback function to be used to provide the content if it's not in the cache. For example, this can be used to fallback to an HTTP request on cache misses. `fn` may return a value or a Promise.
 
 ```js
 cache.fallbackTo(function(uri, options) {
@@ -135,7 +133,7 @@ Creates a new UpdateQueue instance that will use the `senderFn` thunk to send re
 - `@param senderFn {function}` A function that is responsible for sending the requests. Takes a single argument which is the value that was provided to `push()`
 - `@param [opts] {object}` An options hash
   - `.pouch` options for the call to the `PouchDB` constructor
-  - `.autoDrain` Controls whether calls to `push()` will automatically schedule updates to be sent (defaults to `true`) 
+  - `.autoDrain` Controls whether calls to `push()` will automatically schedule updates to be sent (defaults to `true`)
 
 #### UpdateQueue#push(update)
 
